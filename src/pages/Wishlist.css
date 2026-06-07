@@ -1,0 +1,101 @@
+.wishlist-page { padding: 40px 24px 80px; }
+
+.wishlist-empty {
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.wishlist-empty .empty-icon { font-size: 72px; margin-bottom: 16px; }
+.wishlist-empty h2 { font-size: 28px; margin-bottom: 8px; }
+.wishlist-empty p { color: var(--muted); margin-bottom: 32px; }
+
+.wishlist-page h1 {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 32px;
+}
+
+.wishlist-page h1 span {
+  font-size: 20px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.wish-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.wish-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.wish-img {
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--bg3);
+}
+
+.wish-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.wish-card:hover .wish-img img { transform: scale(1.05); }
+
+.wish-info { padding: 16px; }
+.wish-cat { font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+
+.wish-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.wish-info h3:hover { color: var(--gold); }
+
+.wish-price {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.wish-actions { display: flex; gap: 10px; align-items: center; }
+
+.wish-add {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 16px;
+}
+
+.wish-remove {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.wish-remove:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
